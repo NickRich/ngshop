@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="dogListButtons">
+        <button
+        (click)="getAll()"
+        type="button"
+        class="btn btn-primary"
+        >
+        Get All Dogs
+        </button>
+        <button
+        (click)="getFavorites()"
+        type="button"
+        class="btn btn-primary"
+        >
+        Show My Favorites
+        </button>
+    </div>
+    
+
+    <div class="doglist">
+      <div *ngFor="let dog of dogs">
+        <div class="dogComponent">
+          <img alt="{{ dog.name }}" src="{{ dog.image }}" style="height: 200px; width:400px"/>
+
+          <div class="dogButtons">
+            <div class="dogLikes">
+              <a
+              class="btn btn-info btn-lg"
+              (click)="setLike(dog.id)"
+              style="font-size:48px;color: #4E90D5; background-color: white;border: 0px"
+            >
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+            </a>
+
+              <h2>{{ dog.numberOfLikes }}</h2>
+            </div>
+            <div class="dogFavorites">
+              <div *ngIf="!dog.favorited">
+                <a
+                  class="btn btn-info btn-lg"
+                  (click)="setFavorite(dog.id)"
+                  style="font-size:48px;color:gray;background-color: white;border: 0px"
+                >
+                  <span class="glyphicon glyphicon-heart"></span>
+                </a>
+              </div>
+              <div *ngIf="dog.favorited">
+                <a
+                  class="btn btn-info btn-lg"
+                  (click)="setFavorite(dog.id)"
+                  style="font-size:48px;color:red;background-color: white;border: 0px"
+                >
+                  <span class="glyphicon glyphicon-heart"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

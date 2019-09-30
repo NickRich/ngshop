@@ -1,0 +1,44 @@
+.dogListButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.doglist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dogComponent {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 10px;
+}
+
+.dogButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dogLikes {
+    display: flex;
+    flex-direction: row;
+}
+
+#likeButton {
+    display: flex;
+    margin: 10px;
+}
+#favButton{
+    display: flex;
+    margin: 10px;
+}
+.dogFavorites {
+    display: flex;
+}
