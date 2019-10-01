@@ -15,6 +15,7 @@
         (click)="getAll()"
         type="button"
         class="btn btn-primary"
+        style="background-color:  #C38D9E"
         >
         Get All Dogs
         </button>
@@ -22,6 +23,7 @@
         (click)="getFavorites()"
         type="button"
         class="btn btn-primary"
+        style="background-color:  #C38D9E"
         >
         Show My Favorites
         </button>
@@ -38,19 +40,19 @@
               <a
               class="btn btn-info btn-lg"
               (click)="setLike(dog.id)"
-              style="font-size:48px;color: #4E90D5; background-color: white;border: 0px"
+              style="font-size:48px;color: #557A95; background-color: transparent;border: 0px"
             >
               <span class="glyphicon glyphicon-thumbs-up"></span>
             </a>
 
-              <h2>{{ dog.numberOfLikes }}</h2>
+              <h2 style="color: antiquewhite">{{ dog.numberOfLikes }}</h2>
             </div>
             <div class="dogFavorites">
               <div *ngIf="!dog.favorited">
                 <a
                   class="btn btn-info btn-lg"
                   (click)="setFavorite(dog.id)"
-                  style="font-size:48px;color:gray;background-color: white;border: 0px"
+                  style="font-size:48px;color:gray;background-color: transparent;border: 0px"
                 >
                   <span class="glyphicon glyphicon-heart"></span>
                 </a>
@@ -59,11 +61,19 @@
                 <a
                   class="btn btn-info btn-lg"
                   (click)="setFavorite(dog.id)"
-                  style="font-size:48px;color:red;background-color: white;border: 0px"
+                  style="font-size:48px;color:red;background-color: transparent;border: 0px"
                 >
                   <span class="glyphicon glyphicon-heart"></span>
                 </a>
               </div>
+              <button
+                (click)="deleteDog(dog.id)"
+                type="button"
+                class="btn btn-primary"
+                style="background-color:  #C38D9E"
+              >
+              Delete
+              </button>
             </div>
           </div>
         </div>

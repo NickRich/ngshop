@@ -1,8 +1,9 @@
 export interface Dog {
     id: string,
-    name: string,
     thumbnail: string,
     image: string,
-    numberOfLikes?: number
-    favorited?: boolean
+    numberOfLikes?: number,
+    favorited?: boolean,
+    title: string,
+    name: string,
 }

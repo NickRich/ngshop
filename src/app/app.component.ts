@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotifierService } from './notifier/notifier.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'The Bulldog Shop';
+  constructor(
+    private _notifier: NotifierService
+  ) { }
+
 }
